@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Criação de uma nova tabela
 model Courses {
   id          String   @id @default(uuid())
   name        String   @unique
@@ -17,6 +18,7 @@ model Courses {
   duration    Int
   created_at  DateTime @default(now())
 
+  // nome da tabela, caso não defina, será escolhido o nome do model "Courses"
   @@map("courses")
 }
 
