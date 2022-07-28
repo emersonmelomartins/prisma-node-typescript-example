@@ -1,0 +1,7 @@
+yarn prisma init
+
+yarn prisma studio
+
+yarn prisma migrate dev --name migration_name
+
+yarn prisma generate
