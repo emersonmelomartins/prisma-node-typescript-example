@@ -19,7 +19,7 @@ async function create() {
     },
   });
 
-  console.log(course)
+  console.log(course);
 }
 
 async function findOne() {
@@ -31,9 +31,24 @@ async function findOne() {
   console.log(course);
 }
 
+async function update() {
+  const course = await prisma.courses.update({
+    where: {
+      id: "175066cd-22dd-4286-aefe-6665a2a7f7f1",
+    },
+    data: {
+      duration: 999,
+      description: "editado",
+    },
+  });
+
+  console.log(course);
+}
+
 async function main() {
-  create();
-  findOne();
+  // create();
+  // findOne();
+  update();
 }
 
 main();
